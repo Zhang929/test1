@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta-Information -->
+    <title>Zawya Admin Panel</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Vendor: Bootstrap 4 Stylesheets  -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Our Website CSS Styles -->
+    <link rel="stylesheet" href="css/icons.min.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
+
+    <!-- Color Scheme -->
+    <link rel="stylesheet" href="css/color-schemes/color.css" type="text/css" title="color3">
+    <link rel="alternate stylesheet" href="css/color-schemes/color1.css" title="color1">
+    <link rel="alternate stylesheet" href="css/color-schemes/color2.css" title="color2">
+    <link rel="alternate stylesheet" href="css/color-schemes/color4.css" title="color4">
+    <link rel="alternate stylesheet" href="css/color-schemes/color5.css" title="color5">
+</head>
+<body class="expand-data panel-data">
+  <div class="topbar">
+    <div class="logo">
+      <h1><a href="#" title=""><img src="images/logo1.png" alt="" /></a></h1>
+    </div>
+    <div class="topbar-data">
+      <form class="topbar-search">
+          <input type="text" placeholder="Type and Hit Enter" />
+          <button type="submit"><i class="ion-ios-search-strong"></i></button>
+      </form>
+      <div class="usr-act">
+        <span><img src="images/resource/topbar-usr1.jpg" alt="" /><i class="sts away"></i></span>
+        <div class="usr-inf">
+          <div class="usr-thmb brd-rd50">
+            <img class="brd-rd50" src="images/resource/usr.jpg" alt="" />
+            <i class="sts away"></i>
+            <a class="green-bg brd-rd5" href="#" title=""><i class="fa fa-envelope"></i></a>
+          </div>
+          <h5><a href="#" title="">John Smith</a></h5>
+          <span>Co Worker</span>
+          <i>076 9477 4896</i>
+          <div class="act-pst-lk-stm">
+            <a class="brd-rd5 green-bg-hover" href="#" title=""><i class="ion-heart"></i> Love</a>
+            <a class="brd-rd5 blue-bg-hover" href="#" title=""><i class="ion-forward"></i> Reply</a>
+          </div>
+          <div class="usr-ft">
+            <a class="btn-danger" href="#" title=""><i class="fa fa-sign-out"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="topbar-bottom-colors">
+      <i style="background-color: #2c3e50;"></i>
+      <i style="background-color: #9857b2;"></i>
+      <i style="background-color: #2c81ba;"></i>
+      <i style="background-color: #5dc12e;"></i>
+      <i style="background-color: #feb506;"></i>
+      <i style="background-color: #e17c21;"></i>
+      <i style="background-color: #bc382a;"></i>
+    </div>
+  </div><!-- Topbar -->
+  
+  <header class="side-header light-skin expand-header">
+    <div class="nav-head">Main Navigation <span class="menu-trigger"><i class="ion-android-menu"></i></span></div>
+    <nav class="custom-scrollbar">
+      <ul class="drp-sec">
+        <li><a href="index.html" title=""><i class="ion-home"></i>Dashboard</a></li>
+      </ul>
+      <h4>Features</h4>
+      <ul class="drp-sec">
+  
+        <li><a href="tables.html" title=""><i class="ion-crop"></i> Tables</a></li>
+        <li><a href="charts.html" title=""><i class="ion-podium"></i> Charts</a></li>
+      </ul>
+      <h4>Pages</h4>
+      <ul class="drp-sec">
+        <li class="has-drp"><a href="#" title=""><i class="ion-android-clipboard"></i> <span>General</span></a>
+          <ul class="sb-drp">
+            <li><a href="login.html" title="">Login</a></li>
+            <li><a href="register.html" title="">Register</a></li>
+          </ul>
+        </li>
+        <li class="has-drp"><a href="#" title=""><i class="ion-android-contact"></i> <span>User</span></a>
+          <ul class="sb-drp">
+            <li><a href="profile.html" title="">Profile Page</a></li>
+            <li><a href="profile-edit.html" title="">Profile Edit</a></li>
+          </ul>
+        </li>
+  
+      </ul>
+    </nav>
+  </header><!-- Side Header -->
+
+<div class="option-panel">
+  <span class="panel-btn"><i class="fa ion-android-settings fa-spin"></i></span>
+  <div class="color-panel">
+    <h4>Text Color</h4>
+    <span class="color1" onclick="setActiveStyleSheet('color1'); return false;"><i></i></span>
+    <span class="color2" onclick="setActiveStyleSheet('color2'); return false;"><i></i></span>
+    <span class="color3" onclick="setActiveStyleSheet('color'); return false;"><i></i></span>
+    <span class="color4" onclick="setActiveStyleSheet('color4'); return false;"><i></i></span>
+    <span class="color5" onclick="setActiveStyleSheet('color5'); return false;"><i></i></span>
+  </div>
+</div><!-- Options Panel -->
+<div class="pg-tp">
+    <i class="ion-cube"></i>
+    <div class="pr-tp-inr">
+        <h4>Profile Edit Page</h4>
+        <span>You can easily style a Profile Page.</span>
+    </div>
+</div><!-- Page Top -->
+
+<div class="panel-content">
+    <div class="widget pad50-65">
+        <div class="profile-wrp">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-lg-4">
+                    <div class="profile-info-wrp edit-prf">
+                        <div class="insta-wrp">
+                            <span><img id="rslt-img" class="brd-rd50" src="images/resource/insta-dp.jpg" alt="" /><span class="sts online"></span><label class="fileContainer brd-rd50"><i class="fa fa-camera"></i><input id="upld-file" type="file" /></label></span>
+                            <div class="insta-inf">
+                                <h2><a href="#" title="">John Smith</a> <i class="fa fa-pencil edit-btn"></i></h2>
+                                <span class="desg">Product Manager <a class="blue-clr" href="#" title="">@GraphicXspace</a></span>
+                                <div class="grn-inf-lst"><i class="fa fa-user"></i> Name: <input type="text" class="brd-rd5" placeholder="" /></div>
+                                <div class="grn-inf-lst"><i class="fa fa-user"></i> Designation: <input type="text" class="brd-rd5" placeholder="" /></div>
+                            </div>
+                        </div>
+                        <div class="opt-btn-lst">
+                            <div class="opt-btn">
+                                <span><i class="fa fa-envelope"></i> Message:</span>
+                                <label class="switch-light switch-candy" onclick="">
+                                    <input type="checkbox" />
+                                    <span>
+                                        <span>Off</span>
+                                        <span>On</span>
+                                        <a></a>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="opt-btn">
+                                <span><i class="fa fa-weixin"></i> Chat:</span>
+                                <label class="switch-light switch-candy" onclick="">
+                                    <input type="checkbox" />
+                                    <span>
+                                        <span>Off</span>
+                                        <span>On</span>
+                                        <a></a>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="opt-btn">
+                                <span><i class="fa fa-phone"></i> Call:</span>
+                                <label class="switch-light switch-candy" onclick="">
+                                    <input type="checkbox" />
+                                    <span>
+                                        <span>Off</span>
+                                        <span>On</span>
+                                        <a></a>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="usr-abut">
+                            <h5 class="prf-edit-tl">About Me <i class="fa fa-pencil edit-btn"></i></h5>
+                            <textarea class="brd-rd5" placeholder="Write about yourself..."></textarea>
+                        </div>
+                        <div class="usr-gnrl-inf">
+                            <h5 class="prf-edit-tl">General Info <i class="fa fa-pencil edit-btn"></i></h5>
+                            <div class="grn-inf-lst"><i class="fa fa-home"></i> Company Name: <input type="text" class="brd-rd5" placeholder="" /></div>
+                            <div class="grn-inf-lst"><i class="fa fa-graduation-cap"></i> Position: <input type="text" class="brd-rd5" placeholder="" /></div>
+                        </div>
+                        <div class="usr-cnt-inf">
+                            <h5 class="prf-edit-tl">Contact Information <i class="fa fa-pencil edit-btn"></i></h5>
+                            <ul class="usr-cnt-inf-lst">
+                                <li><i class="fa fa-home"></i> <strong>Address:</strong> <input type="text" class="brd-rd5" placeholder="" /></li>
+                                <li><i class="fa fa-phone"></i> <strong>Phone:</strong> <input type="text" class="brd-rd5" placeholder="" /></li>
+                                <li><i class="fa fa-fax"></i> <strong>Fax:</strong> <input type="text" class="brd-rd5" placeholder="" /></li>
+                                <li><i class="fa fa-envelope"></i> <strong>Email ID:</strong> <input type="email" class="brd-rd5" placeholder="" /></li>
+                                <li><i class="fa fa-facebook-square"></i> <strong>Add Facebook URL:</strong> <input type="text" class="brd-rd5" placeholder="" /></li>
+                                <li><i class="fa fa-twitter"></i> <strong>Add Twitter URL:</strong> <input type="text" class="brd-rd5" placeholder="" /></li>
+                                <li><i class="fa fa-google-plus"></i> <strong>Add Google URL:</strong> <input type="text" class="brd-rd5" placeholder="" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12 col-lg-8">
+                    <div class="usr-actvty-wrp widget pad50-40">
+                        <h4 class="widget-title">Activity <span class="green-bg badge">05 Messages</span></h4>
+                        <div class="slct-bx">
+                            <i>Added:</i>
+                            <span>
+                                <select>
+                                    <option>Any Date</option>
+                                    <option>15-9-2017</option>
+                                    <option>12-8-2017</option>
+                                    <option>08-7-2017</option>
+                                    <option>10-6-2017</option>
+                                </select>
+                            </span>
+                        </div>
+                        <form class="cntnt-frm brd-rd5">
+                            <textarea placeholder="What's in your mind"></textarea>
+                            <div class="cnt-opt">
+                                <div class="cnt-opt-lst">
+                                    <span><label class="fileContainer"><i class="fa fa-picture-o"></i><input type="file" /></label></span>
+                                    <span><label class="fileContainer"><i class="fa fa-microphone"></i><input type="file" /></label></span>
+                                    <span><label class="fileContainer"><i class="ion-upload"></i><input type="file" /></label></span>
+                                    <span><i class="fa fa-paper-plane"></i></span>
+                                </div>
+                                <button class="brd-rd5 green-bg" type="submit">Post</button>
+                            </div>
+                        </form>
+                        <div class="act-pst-lst">
+                            <div class="act-pst">
+                                <img class="brd-rd50" src="images/resource/acti-thmb1.jpg" alt="" />
+                                <div class="act-pst-inf">
+                                    <div class="act-pst-inr"><h5><a href="#" title="">Sadi Orlaf</a></h5> posted in <a href="#" title="">Material</a></div>
+                                    <span class="spnd-tm">5 Min Ago</span>
+                                    <div class="act-pst-dta">
+                                        <p>That's awesome!</p>
+                                    </div>
+                                    <span class="pst-tm"><a href="#" title=""><i class="fa fa-trash-o"></i> Remove</a></span>
+                                    <div class="act-pst-lk-stm">
+                                        <a class="brd-rd5 green-bg-hover" href="#" title=""><i class="ion-heart"></i> Love</a>
+                                        <a class="brd-rd5 blue-bg-hover" href="#" title=""><i class="ion-thumbsup"></i> Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="act-pst">
+                                <img class="brd-rd50" src="images/resource/acti-thmb2.jpg" alt="" />
+                                <div class="act-pst-inf">
+                                    <div class="act-pst-inr"><h5><a href="#" title="">Overtunk</a></h5> posted in <a href="#" title="">New Blog</a></div>
+                                    <span class="spnd-tm">37 Min Ago</span>
+                                    <div class="act-pst-dta">
+                                        <p>That's awesome!</p>
+                                    </div>
+                                    <span class="pst-tm"><a href="#" title=""><i class="fa fa-trash-o"></i> Remove</a></span>
+                                    <div class="act-pst-lk-stm">
+                                        <a class="brd-rd5 green-bg-hover" href="#" title=""><i class="ion-heart"></i> Love</a>
+                                        <a class="brd-rd5 blue-bg-hover" href="#" title=""><i class="ion-thumbsup"></i> Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="act-pst">
+                                <img class="brd-rd50" src="images/resource/acti-thmb3.jpg" alt="" />
+                                <div class="act-pst-inf">
+                                    <div class="act-pst-inr"><h5><a href="#" title="">Kim Smith</a></h5> add <a href="#" title="">1 photo</a></div>
+                                    <span class="spnd-tm">50 Min Ago</span>
+                                    <div class="act-pst-dta">
+                                        <img src="images/resource/act-pst-img1.jpg" alt="" />
+                                    </div>
+                                    <span class="pst-tm"><a href="#" title=""><i class="fa fa-trash-o"></i> Remove</a></span>
+                                    <div class="act-pst-lk-stm">
+                                        <a class="brd-rd5 green-bg-hover" href="#" title=""><i class="ion-heart"></i> Love</a>
+                                        <a class="brd-rd5 blue-bg-hover" href="#" title=""><i class="ion-thumbsup"></i> Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="act-pst">
+                                <img class="brd-rd50" src="images/resource/acti-thmb4.jpg" alt="" />
+                                <div class="act-pst-inf">
+                                    <div class="act-pst-inr"><h5><a href="#" title="">Chris Johnathan</a></h5> started following <h6><a href="#" title="">Monica Smith</a></h6> site.</div>
+                                    <span class="spnd-tm">1 Hour Ago</span>
+                                    <div class="act-pst-dta">
+                                    </div>
+                                    <span class="pst-tm"><a href="#" title=""><i class="fa fa-trash-o"></i> Remove</a></span>
+                                    <div class="act-pst-lk-stm">
+                                        <a class="brd-rd5 green-bg-hover" href="#" title=""><i class="ion-heart"></i> Love</a>
+                                        <a class="brd-rd5 blue-bg-hover" href="#" title=""><i class="ion-thumbsup"></i> Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="act-pst">
+                                <img class="brd-rd50" src="images/resource/acti-thmb2.jpg" alt="" />
+                                <div class="act-pst-inf">
+                                    <div class="act-pst-inr"><h5><a href="#" title="">Overtunk</a></h5> posted in <a href="#" title="">New Blog</a></div>
+                                    <span class="spnd-tm">37 Min Ago</span>
+                                    <div class="act-pst-dta">
+                                        <p>That's awesome!</p>
+                                    </div>
+                                    <span class="pst-tm"><a href="#" title=""><i class="fa fa-trash-o"></i> Remove</a></span>
+                                    <div class="act-pst-lk-stm">
+                                        <a class="brd-rd5 green-bg-hover" href="#" title=""><i class="ion-heart"></i> Love</a>
+                                        <a class="brd-rd5 blue-bg-hover" href="#" title=""><i class="ion-thumbsup"></i> Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="act-pst">
+                                <img class="brd-rd50" src="images/resource/acti-thmb3.jpg" alt="" />
+                                <div class="act-pst-inf">
+                                    <div class="act-pst-inr"><h5><a href="#" title="">Kim Smith</a></h5> add <a href="#" title="">2 photos</a></div>
+                                    <span class="spnd-tm">50 Min Ago</span>
+                                    <div class="act-pst-dta">
+                                        <img src="images/resource/act-pst-img1.jpg" alt="" />
+                                        <img src="images/resource/act-pst-img2.jpg" alt="" />
+                                    </div>
+                                    <span class="pst-tm"><a href="#" title=""><i class="fa fa-trash-o"></i> Remove</a></span>
+                                    <div class="act-pst-lk-stm">
+                                        <a class="brd-rd5 green-bg-hover" href="#" title=""><i class="ion-heart"></i> Love</a>
+                                        <a class="brd-rd5 blue-bg-hover" href="#" title=""><i class="ion-thumbsup"></i> Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="act-pst">
+                                <img class="brd-rd50" src="images/resource/acti-thmb4.jpg" alt="" />
+                                <div class="act-pst-inf">
+                                    <div class="act-pst-inr"><h5><a href="#" title="">Chris Johnathan</a></h5> started following <h6><a href="#" title="">Monica Smith</a></h6> site.</div>
+                                    <span class="spnd-tm">1 Hour Ago</span>
+                                    <div class="act-pst-dta">
+                                    </div>
+                                    <span class="pst-tm"><a href="#" title=""><i class="fa fa-trash-o"></i> Remove</a></span>
+                                    <div class="act-pst-lk-stm">
+                                        <a class="brd-rd5 green-bg-hover" href="#" title=""><i class="ion-heart"></i> Love</a>
+                                        <a class="brd-rd5 blue-bg-hover" href="#" title=""><i class="ion-thumbsup"></i> Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- Activity Post List -->
+                        <div class="vw-mr-act">
+                            <a href="#" title="">View More Activity</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- Panel Content -->
+<footer>
+  <p>Copyright <a href="http://www.bootstrapmb.com" title="">Example Company</a> &amp; 2017 - 2018</p>
+  <span>10GB of 250GB Free.</span>
+</footer>
+
+
+<!-- Vendor: Javascripts -->
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<!-- Vendor: Followed by our custom Javascripts -->
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="js/select2.min.js" type="text/javascript"></script>
+<script src="js/slick.min.js" type="text/javascript"></script>
+
+<!-- Our Website Javascripts -->
+<script src="js/isotope.min.js" type="text/javascript"></script>
+<script src="js/isotope-int.js" type="text/javascript"></script>
+<script src="js/jquery.counterup.js" type="text/javascript"></script>
+<script src="js/waypoints.min.js" type="text/javascript"></script>
+<script src="js/highcharts.js" type="text/javascript"></script>
+<script src="js/exporting.js" type="text/javascript"></script>
+<script src="js/highcharts-more.js" type="text/javascript"></script>
+<script src="js/moment.min.js" type="text/javascript"></script>
+<script src="js/jquery.circliful.min.js" type="text/javascript"></script>
+<script src="js/fullcalendar.min.js" type="text/javascript"></script>
+<script src="js/jquery.downCount.js" type="text/javascript"></script>
+<script src="js/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+<script src="js/jquery.formtowizard.js" type="text/javascript"></script>
+<script src="js/form-validator.min.js" type="text/javascript"></script>
+<script src="js/form-validator-lang-en.min.js" type="text/javascript"></script>
+<script src="js/cropbox-min.js" type="text/javascript"></script>
+<script src="js/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="js/ion.rangeSlider.min.js" type="text/javascript"></script>
+<script src="js/jquery.poptrox.min.js" type="text/javascript"></script>
+<script src="js/styleswitcher.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        'use strict';
+
+        //===== Display Image Script =====//
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#rslt-img').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#upld-file").change(function(){
+            readURL(this);
+        });
+    });
+</script>
+</body>
+</html>
